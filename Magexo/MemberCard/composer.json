@@ -1,0 +1,24 @@
+{
+    "name": "magexo/module-membercard",
+    "description": "Simple member card module",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Peter Bartos",
+            "email": "pbartos3@icloud.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magexo\\MemberCard\\": ""
+        }
+    }
+}

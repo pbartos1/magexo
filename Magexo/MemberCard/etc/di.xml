@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magexo\MemberCard\Api\MemberCardManagementInterface" type="Magexo\MemberCard\Model\MemberCardManagement"/>
+	<preference for="Magexo\MemberCard\Api\MemberCardRepositoryInterface" type="Magexo\MemberCard\Model\MemberCardRepository"/>
+	<preference for="Magexo\MemberCard\Api\Data\MemberCardInterface" type="Magexo\MemberCard\Model\MemberCard"/>
+	<preference for="Magexo\MemberCard\Api\Data\MemberCardSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Magexo\MemberCard\Model\ResourceModel\MemberCard\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">magexo_membercard_membercard</argument>
+			<argument name="resourceModel" xsi:type="string">Magexo\MemberCard\Model\ResourceModel\MemberCard\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="magexo_membercard_membercard_listing_data_source" xsi:type="string">Magexo\MemberCard\Model\ResourceModel\MemberCard\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

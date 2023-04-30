@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+<!--	<route url="/V1/magexo-membercard/membercard" method="GET">
+		<service class="Magexo\MemberCard\Api\MemberCardManagementInterface" method="getMemberCard"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/magexo-membercard/membercard" method="POST">
+		<service class="Magexo\MemberCard\Api\MemberCardRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Magexo_MemberCard::MemberCard_save"/>
+		</resources>
+	</route>-->
+	<route url="/V1/magexo-membercard/membercard/search" method="GET">
+		<service class="Magexo\MemberCard\Api\MemberCardRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Magexo_MemberCard::MemberCard_view"/>
+		</resources>
+	</route>
+<!--	<route url="/V1/magexo-membercard/membercard/:membercardId" method="GET">
+		<service class="Magexo\MemberCard\Api\MemberCardRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Magexo_MemberCard::MemberCard_view"/>
+		</resources>
+	</route>
+	<route url="/V1/magexo-membercard/membercard/:membercardId" method="PUT">
+		<service class="Magexo\MemberCard\Api\MemberCardRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Magexo_MemberCard::MemberCard_update"/>
+		</resources>
+	</route>
+	<route url="/V1/magexo-membercard/membercard/:membercardId" method="DELETE">
+		<service class="Magexo\MemberCard\Api\MemberCardRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Magexo_MemberCard::MemberCard_delete"/>
+		</resources>
+	</route>-->
+</routes>
