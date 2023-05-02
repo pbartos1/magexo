@@ -80,6 +80,7 @@
 				</item>
 			</argument>
 			<settings>
+				<required>true</required>
 				<dataType>text</dataType>
 				<label translate="true">Valid From</label>
 				<dataScope>valid_from</dataScope>
@@ -95,6 +96,7 @@
 				</item>
 			</argument>
 			<settings>
+				<required>true</required>
 				<dataType>text</dataType>
 				<label translate="true">Valid To</label>
 				<dataScope>valid_to</dataScope>
