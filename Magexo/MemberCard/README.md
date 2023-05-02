@@ -11,9 +11,10 @@ Vytvorenie Magento modulu
 vytvorenie entity memberdcard
 - vytvorenie DB tabulky magexo_membercard_membercard [ db_schema.xml ]
 - pridany index na customer_id. Predpokladam, ze pri praci s entitou sa bude vyhladavat primarne podla ID customera.
-- pridany Foreign Key Constraint na customer_id na tab. customer_entity aby sa zabezpecila integrita DB. Pri vymazani ustomera sa zmaze aj jeho clenska karta
+- pridany Foreign Key Constraint na customer_id na tab. customer_entity aby sa zabezpecila integrita DB. Pri vymazani customera sa zmaze aj jeho clenska karta
 - resource model interface na komunikaciu s DB
 - repozitory interface (repository pattern) na CRUD operacie s entitou
+- pridana trieda MemberCardManagement kde by mohla byt nejaka business logika pre entitu pripadne definovane dalsie metody pre API 
 
 REST API Endpointy
 - zadefinovanie endpointov v webapi.xml
